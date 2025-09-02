@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cinema-inspired design system with dark theater aesthetic and golden accents */
+
+@layer base {
+  :root {
+    /* Cinema Dark Theme - Theater experience */
+    --background: 220 27% 8%;           /* Deep theater black */
+    --foreground: 48 100% 96%;          /* Warm white for readability */
+
+    --card: 220 27% 10%;                /* Slightly lighter than background */
+    --card-foreground: 48 100% 96%;     /* Warm white text */
+
+    --popover: 220 27% 10%;
+    --popover-foreground: 48 100% 96%;
+
+    /* Golden Cinema Accent - Like movie awards */
+    --primary: 45 100% 51%;             /* Rich golden yellow */
+    --primary-foreground: 220 27% 8%;   /* Dark text on gold */
+
+    --secondary: 220 27% 15%;           /* Dark gray for secondary elements */
+    --secondary-foreground: 48 100% 96%;
+
+    --muted: 220 27% 12%;               /* Muted dark elements */
+    --muted-foreground: 48 20% 70%;     /* Muted text */
+
+    --accent: 45 86% 58%;               /* Lighter gold for accents */
+    --accent-foreground: 220 27% 8%;
+
+    --destructive: 0 84% 60%;           /* Red for errors */
+    --destructive-foreground: 48 100% 96%;
+
+    --border: 220 27% 18%;              /* Subtle borders */
+    --input: 220 27% 15%;               /* Input backgrounds */
+    --ring: 45 100% 51%;                /* Focus rings in gold */
+
+    --radius: 0.75rem;
+
+    /* Cinema gradients for dramatic effects */
+    --gradient-gold: linear-gradient(135deg, hsl(45 100% 51%), hsl(38 92% 58%));
+    --gradient-dark: linear-gradient(180deg, hsl(220 27% 8%), hsl(220 27% 12%));
+    --gradient-card: linear-gradient(145deg, hsl(220 27% 10%), hsl(220 27% 14%));
+    
+    /* Cinematic shadows with gold glow */
+    --shadow-gold: 0 0 30px hsl(45 100% 51% / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(220 27% 5% / 0.8);
+    --shadow-elevated: 0 20px 50px -15px hsl(220 27% 5% / 0.9);
+    
+    /* Animation timing for smooth cinema feel */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Sidebar colors matching cinema theme */
+    --sidebar-background: 220 27% 8%;
+    --sidebar-foreground: 48 100% 96%;
+    --sidebar-primary: 45 100% 51%;
+    --sidebar-primary-foreground: 220 27% 8%;
+    --sidebar-accent: 220 27% 12%;
+    --sidebar-accent-foreground: 48 100% 96%;
+    --sidebar-border: 220 27% 18%;
+    --sidebar-ring: 45 100% 51%;
+  }
+
+  .light {
+    /* Light mode with subtle cinema touches - for those who prefer it */
+    --background: 48 15% 96%;
+    --foreground: 220 27% 12%;
+    --card: 48 15% 98%;
+    --card-foreground: 220 27% 12%;
+    --popover: 48 15% 98%;
+    --popover-foreground: 220 27% 12%;
+    --primary: 45 100% 40%;
+    --primary-foreground: 48 100% 96%;
+    --secondary: 48 15% 90%;
+    --secondary-foreground: 220 27% 12%;
+    --muted: 48 15% 92%;
+    --muted-foreground: 220 27% 45%;
+    --accent: 45 100% 45%;
+    --accent-foreground: 48 100% 96%;
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 48 100% 96%;
+    --border: 48 15% 85%;
+    --input: 48 15% 90%;
+    --ring: 45 100% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
